@@ -1,0 +1,181 @@
+html, body, #root{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+#root{
+  display: grid;
+  grid-template-columns: 300px auto;
+}
+
+#root > *{
+  height: 100%;
+}
+
+aside{
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+aside > div{
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+aside h1{
+  color: #575757;
+  font-family: arial;
+  font-weight: 100;
+  font-size: 1.8em;
+}
+
+aside p{
+  margin: 5px 0;
+  font-size: larger;
+  text-align: left;
+  display: block;
+  width: max(80%);
+}
+
+aside > div > div{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+aside .wrapperSettings input{
+  width: 100%;
+  margin: 0%;
+  box-sizing: border-box;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid rgb(172, 172, 172);
+  outline: none;
+  padding: 0 5px;
+  font-size: 17px;
+}
+
+aside .wrapperButtons #launch{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0%;
+  margin-top: 12px;
+  box-sizing: border-box;
+  height: 40px;
+  border-radius: 9px;
+  border: 0;
+  outline: none;
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+}
+
+aside .wrapperButtons > div{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+
+aside .wrapperButtons .speed{
+  width: 85%;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+aside .wrapperButtons .speed:hover:before{
+  display: block;
+  content: 'vitesse';
+  background-color: rgb(73, 73, 73);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 15px);
+  color: white;
+  padding: 5px 20px;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  font-size: normal;
+}
+
+aside .wrapperButtons .speed:hover:after{
+  display: block;
+  content: '';
+  height: 10px;
+  width: 15px;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  background-color: rgb(73, 73, 73);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 5px);
+  transform: translateX(-50%);
+}
+
+aside .wrapperButtons > div > svg{
+  height: 25px;
+  width: 25px;
+  fill: #575757;
+}
+
+aside .wrapperButtons > div > svg.disable{
+  cursor: default;
+  pointer-events: none;
+  fill: #9c9c9c;
+}
+
+aside .wrapperButtons > div > svg:not(.disabled){
+  cursor: pointer;
+}
+
+aside select {
+  margin-top: 10px;
+  width: 100%;
+  font-size: 18px;
+  padding: 6px;
+  border-radius: 5px;
+  border: solid #b3b3b3 1px;
+  outline: none;
+}
+
+main{
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+}
+
+main .element{
+  margin-right: 1px;
+  position: relative;
+  border-radius: 5px;
+}
+
+main .element > div{
+  height: 5px;
+  border-radius: 12px;
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 5px);
+  transform: translateX(-50%);
+  width: 95%;
+  display: block;
+  background-color: hsl(0, 0%, 47%);
+}
+
+main > *{
+  flex-grow: 1; 
+}
